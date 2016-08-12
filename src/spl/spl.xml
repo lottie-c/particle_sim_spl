@@ -1,0 +1,92 @@
+<info>
+    <projects>
+        <project pid = "THIS">
+            <alias>THIS</alias>
+            
+            <build>ant</build>
+            
+            <classpaths>
+                <classpath>build/classes</classpath>
+            </classpaths>
+            
+            <scanPatterns>
+                <scanPattern>cz.cuni.mff.spl.casestudy.annotations.**</scanPattern>
+                
+                <!-- pattern to scan all annotations including the measured one 
+                <scanPattern>cz.cuni.mff.spl.casestudy.annotations.**</scanPattern>
+                 -->
+                 
+                <!-- pattern to scan only annotations in Main class - there should be
+                	the newest annotations that wasn't measured properly 
+                <scanPattern>cz.cuni.mff.spl.casestudy.annotations.Main</scanPattern>
+                 -->
+            </scanPatterns>
+            
+	       <!--<repository type="Git" url="git://git.code.sf.net/p/spl-tools/casestudy">-->
+	    
+            <!--local folder for faster measurement during debugging-->
+            <repository type="SourceRelative" url="../..">  
+            
+            
+            <!-- online Git repository for easy measurement will be checked out automatically
+            <repository type="Git" url="git://git.code.sf.net/p/spl-tools/casestudy">  
+            -->
+            
+                <revisions>
+                    <revision rid = "HEAD">
+                        <alias>HEAD</alias>
+                        <value>master</value>
+                    </revision>
+                </revisions>
+            </repository>
+        </project>
+        
+        <project pid = "particle-sim">
+            <alias>particles</alias>
+            
+            <build>ant</build>
+            
+            <classpaths>
+                <classpath>build/classes/utils</classpath>
+                <classpath>**.jar</classpath>
+            </classpaths>
+            
+            <repository type="Git" url="https://github.com/lottie-c/particle_sim">
+            
+            <!-- online Git repository for easy measurement will be checked out automatically  
+            <repository type="git" url="https://github.com/hunterhacker/jdom.git"> 
+            -->
+            
+            <!-- local Git repository for faster measurement during debugging (URL needs to be changed for other users)
+            <repository type="git" url="D:\skola\SW_projekt\case_study\workspace\jdom"> 
+            -->
+            
+                <revisions>
+                    <revision rid="particlesHEAD">
+                        <alias>HEAD</alias>
+                        <value>master</value>
+                    </revision>
+                    
+                   <!-- <revision rid="constructor">
+                        <alias>Constructor</alias>
+                        <value>462b26f06df19d040781db0858182a73e2de9b77</value>
+                    </revision> -->
+
+                    <revision rid="array">
+                        <alias>ArrayList</alias>
+                        <value>04b9edf73f21511a2dc29a0f9ec09f3aaa695f56</value>
+                        <comment>Introduce ArrayList instead of Vector</comment>
+                    </revision>
+                    
+                    <revision rid="vector">
+                        <alias>Vector</alias>
+                        <value>dc782c4a95ff5c6d000c0509e43d8030cddb51ba</value>
+                        <comment>Uses Vector to make MinPriorityQueue </comment>
+                    </revision>
+                    
+                </revisions>
+            </repository>
+        </project>
+		
+    </projects>
+</info>
