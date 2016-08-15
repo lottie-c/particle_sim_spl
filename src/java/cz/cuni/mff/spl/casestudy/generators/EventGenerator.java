@@ -32,6 +32,14 @@ public class EventGenerator {
 	public EventGenerator(){
 	}
 
+	public ArrayList<Object[]> generateInt(int n){
+		ArrayList<Object[]> output = new ArrayList<Object[]>();
+		Integer[] array = new Integer[1];
+		array[0] = Integer.valueOf(n);
+		output.add(array);
+		return output;
+	}
+
 	public ArrayList<Object[]> generate(){
 		ArrayList<Object[]> output = new ArrayList<Object[]>();
 		Random rnd = new Random();

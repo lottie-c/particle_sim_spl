@@ -74,15 +74,17 @@
 
                     <revision rid="array">
                         <alias>ArrayList</alias>
-                        <value>04b9edf73f21511a2dc29a0f9ec09f3aaa695f56</value>
+                        <value>395b98755e982bf122d33419b36b79765f9a183b</value>
                         <comment>Introduce ArrayList instead of Vector</comment>
                     </revision>
                     
                     <revision rid="vector">
                         <alias>Vector</alias>
-                        <value>dc782c4a95ff5c6d000c0509e43d8030cddb51ba</value>
+                        <value>8f1c934e1a8f366cb9d5ba08f6889ff2e778e148</value>
                         <comment>Uses Vector to make MinPriorityQueue </comment>
                     </revision>
+
+                    
                     
                 </revisions>
             </repository>

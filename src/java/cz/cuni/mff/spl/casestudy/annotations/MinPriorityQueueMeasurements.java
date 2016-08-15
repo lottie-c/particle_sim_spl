@@ -9,7 +9,11 @@ public class MinPriorityQueueMeasurements{
                     "EventGenerator="
                         + "THIS@HEAD:"
                         + "cz.cuni.mff.spl.casestudy.generators."
-                        + "EventGenerator()#generate()"
+                        + "EventGenerator()#generate()",
+                    "IntegerGenerator="
+                        + "THIS@HEAD:"
+                        + "cz.cuni.mff.spl.casestudy.generators."
+                        + "EventGenerator()#generateInt()"
              },
              methods = {
 	             	"arrayAdd="
@@ -19,11 +23,21 @@ public class MinPriorityQueueMeasurements{
 	             	"vectorAdd="
 	             		+ "particles@Vector:"
 	             		+ "utils."
-	             		+ "MinPriorityQueue#add"
+	             		+ "MinPriorityQueue#add",
+                    "runSimArray="
+                        +"particles@ArrayList:"
+                        +"simulation."
+                        + "ParticleSimulation#run(Integer)",
+                    "runSimVector="
+                        +"particles@Vector:"
+                        +"simulation."
+                        + "ParticleSimulation#run(Integer)"
 
              },
              formula = {
-             		"arrayAdd[EventGenerator]<= vectorAdd[EventGenerator]"
+             		//"arrayAdd[EventGenerator]<= vectorAdd[EventGenerator]",
+                    //"for (n {100, 1000} )"
+                    "runSimArray[IntegerGenerator](10) = runSimVector[IntegerGenerator](10)"
              })
 
 	public static void main(String args[]) {
