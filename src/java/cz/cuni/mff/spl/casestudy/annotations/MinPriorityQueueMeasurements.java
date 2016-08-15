@@ -36,8 +36,8 @@ public class MinPriorityQueueMeasurements{
              },
              formula = {
              		"arrayAdd[EventGenerator]<= vectorAdd[EventGenerator]",
-                    //"for (n {10, 100, 1000} )"
-                    //"runSimArray[IntegerGenerator](n) = runSimVector[IntegerGenerator](n)"
+                    "for (n {10, 100, 1000} )"
+                    "runSimArray[IntegerGenerator](n) <= runSimVector[IntegerGenerator](n)"
              })
 
 	public static void main(String args[]) {
